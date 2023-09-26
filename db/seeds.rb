@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+#
+Post.Destroy_all
+
+# create 20 posts
+20.time do
+  Post.create(title: FAKER::Lorem.sentence(word_count: 3),
+              body: FAKER::Lorem.paragraph(sentence_count: 3))
+end
