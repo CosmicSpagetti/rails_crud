@@ -1,5 +1,5 @@
-class Api
-  class V1
+module Api
+  module V1
     class PostsController < ApplicationController
       before_action :set_post, only: %i[show update destroy]
 
